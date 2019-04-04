@@ -1,0 +1,150 @@
+.grid {
+  display: grid;
+  grid-template-columns: 150px auto 150px;
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 1em;
+}
+
+header,
+aside,
+article,
+footer {
+  background: #eaeaea;
+  padding: 1em;
+}
+
+header, footer {
+  grid-column: 1 / 4;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+h1 {
+  text-align: center;
+  align-content: center;
+  align-self: center;
+}
+button {
+  border-radius: 25px;
+  background-color: #7B68EE;
+  padding: 2%;
+  width: 25%;
+  height: 2%;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  color: white;
+
+}
+
+.grid > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  display: -ms-grid;
+  display: grid;
+  grid-gap:7%;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  width: 50vw;
+  height: 30vh;
+}
+
+@media screen and (max-width: 60em) {
+  .container {
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+.grid-1 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+      grid-row: 1;
+      color: red;
+      background-color: blue;
+}
+
+@media screen and (max-width: 60em) {
+  .grid-1 {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+    -ms-grid-row: 1;
+        grid-row: 1;
+  }
+}
+
+.grid-2 {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 5;
+  -ms-grid-row: 1;
+      grid-row: 1;
+      background-color: green;
+}
+
+@media screen and (max-width: 60em) {
+  .grid-2 {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+    -ms-grid-row: 2;
+        grid-row: 2;
+  }
+}
+
+.grid-3 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 2;
+      grid-row: 2;
+      background-color: purple;
+}
+
+@media screen and (max-width: 60em) {
+  .grid-3 {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+    -ms-grid-row: 3;
+        grid-row: 3;
+  }
+}
+
+.grid-4 {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 5;
+  -ms-grid-row: 2;
+      grid-row: 2;
+      background-color: brown;
+}
+
+@media screen and (max-width: 60em) {
+  .grid-4 {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+    -ms-grid-row: 4;
+        grid-row: 4;
+  }
+}
+
+.callout {
+  margin: 0;
+}
